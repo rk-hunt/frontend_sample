@@ -1,0 +1,12 @@
+@import '../style/variables.less';
+
+.tag {
+    font-weight: 500;
+    each(@types, {
+        &-@{value} {
+            color: ~"@{@{prefix}-text-color-@{value}}";
+            background-color: ~"@{@{prefix}-background-color-@{value}}";
+            border-color: ~"@{@{prefix}-background-color-@{value}}";
+        }
+    });
+}

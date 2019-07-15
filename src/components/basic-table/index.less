@@ -1,0 +1,27 @@
+@import '../style/variables.less';
+
+.basic-table {
+    .ant-table-body {
+        max-height: calc(100vh - 195px) !important;
+        overflow-y: auto !important;
+    }
+    .ant-table-thead > tr > th {
+        background-color: ~"@{@{prefix}-light-gray}" !important;
+    }
+    .ant-table-tbody > tr.ant-table-row-selected td {
+        background-color: ~"@{@{prefix}-light-gray}" !important;
+    }
+    .ant-table-footer {
+        background-color: ~"@{@{prefix}-light-gray}" !important;
+    }
+
+    .ant-checkbox .ant-checkbox-inner {
+        background-color: ~"@{@{prefix}-light-gray-1}";
+    }
+    .ant-checkbox-checked .ant-checkbox-inner {
+        background-color: ~"@{@{prefix}-primary}" !important;
+    }
+    .ant-table-pagination {
+        margin: 16px !important;
+    }
+}

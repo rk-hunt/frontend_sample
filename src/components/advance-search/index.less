@@ -1,0 +1,30 @@
+@import '../style/variables.less';
+
+.advance-search-wrapper {
+    position: relative;
+    width: 100%;
+    z-index: 9999;
+}
+.advance-search {
+    left: 0 !important;
+    position: absolute !important;
+    top: 0 !important;
+    width: 100% !important;
+    .ant-collapse-content-box {
+        padding: 0px !important;
+    }
+    .ant-collapse-header {
+        display: none !important;
+    }
+    .ant-collapse-item {
+        border: none !important;
+        box-shadow: 0 4px 6px hsla(0, 0%, .1);
+    }
+}
+.advance-search-footer {
+    background-color: hsl(220, 27%, 98%);
+    border-bottom: 1px solid #f5f6f8;
+    border-top: 1px solid #f5f6f8;
+    display: flex;
+    justify-content: flex-end;
+}

@@ -1,0 +1,13 @@
+@import '../style/variables.less';
+
+.user-avatar {
+    color: ~"@{@{prefix}-white}";
+    vertical-align: middle;
+    font-weight: ~"@{@{prefix}-font-weight-medium}"; 
+
+    each(@types, { 
+        &-@{value} { 
+            background-color: ~"@{@{prefix}-@{value}}" !important; 
+        } 
+    });
+}

@@ -1,0 +1,59 @@
+@import './variables.less';
+//--- functions
+.spacing(@values, @type, @unit){
+    each(@values,{
+        &-@{value}{
+            @{type}: ~"@{value}@{unit}" !important;
+        }  
+        &l-@{value}{
+            @{type}-left: ~"@{value}@{unit}" !important;
+        }
+        &r-@{value}{
+            @{type}-right: ~"@{value}@{unit}" !important;
+        }
+        &t-@{value}{
+            @{type}-top: ~"@{value}@{unit}" !important;
+        }
+        &b-@{value}{
+            @{type}-bottom: ~"@{value}@{unit}" !important;
+        }
+        &x-@{value}{
+            @{type}-left: ~"@{value}@{unit}" !important;
+            @{type}-right: ~"@{value}@{unit}" !important;
+        }
+        &y-@{value}{
+            @{type}-top: ~"@{value}@{unit}" !important;
+            @{type}-bottom: ~"@{value}@{unit}" !important;
+        }
+    });
+};
+
+//---padding
+.p{
+    .spacing(@spacing-numbers, padding, px);
+}
+//---margin
+.m{
+    .spacing(@spacing-numbers, margin, px);
+}
+//---height & width
+.h-100-per {
+    height: 100% !important;
+}
+.w-100-per {
+    width: 100% !important;
+}
+
+.title {
+    font-weight: ~"@{@{prefix}-font-weight-medium}" !important;
+    color: ~"@{@{prefix}-heading}" !important;
+    &-small{
+      font-size: ~"@{@{prefix}-font-size-base}" !important;
+    }
+    &-medium{
+        font-size: ~"@{@{prefix}-font-size-medium}" !important;
+    }
+    &-large{
+        font-size: ~"@{@{prefix}-font-size-large}" !important;
+    }
+}

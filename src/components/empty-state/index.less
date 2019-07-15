@@ -1,0 +1,16 @@
+@import '../style/variables.less';
+
+.empty-state {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &-title {
+        color: ~"@{@{prefix}-heading}" !important;
+        font-size: ~"@{@{prefix}-font-size-large}" !important;
+        font-weight: ~"@{@{prefix}-font-weight-medium}" !important;
+        display: block;
+        padding: 8px;
+    }
+}

@@ -1,0 +1,32 @@
+@import '../style/variables.less';
+
+.editable-table-element {
+    border-color: ~"@{@{prefix}-white}" !important;
+    .ant-input {
+        border-color: ~"@{@{prefix}-white}" !important;
+    }
+    > .ant-select-selection {
+        border-color: ~"@{@{prefix}-white}" !important;
+    }
+}
+.has-error {
+    .editable-table-element {
+        border-color: ~"@{@{prefix}-danger}" !important;
+        .ant-input {
+            border-color: ~"@{@{prefix}-danger}" !important;
+        }
+        > .ant-select-selection {
+            border-color: ~"@{@{prefix}-danger}" !important;
+        }
+    }
+}
+.editable-table {
+    .ant-table-tbody {
+        td {
+            padding-bottom: 0 !important;
+        }
+    }
+}
+.editable-table-action {
+    margin-top: -22px;
+}
